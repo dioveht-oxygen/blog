@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 function get_base()
 {
     $server = $_SERVER['HTTP_HOST'];
-    $server = "http://" . $server."/Blog/";
+    $server = "http://" . $server."/blog/";
     return $server;
 }
 

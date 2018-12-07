@@ -11,7 +11,7 @@ $idmodel = 1;
 <?php
 if(isset($success)){
     echo "<script>
-                    alert('$success');
+           alert('$success');
                 </script>";
 }
 ?>
