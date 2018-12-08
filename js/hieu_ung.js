@@ -19,44 +19,6 @@ function backHome(base) {
     alert(base);
     //window.location= base;
 }
-function kiem_tra_form_dang_ky() {
-    var ten = document.dang_ky.ten.value.length;
-    var user = document.dang_ky.user.value.length;
-    var thienthi = document.dang_ky.tenhienthi.value.length;
-    var pass = document.dang_ky.pass.value;
-    var xpass = document.dang_ky.pass_again.value;
-    var email = document.dang_ky.email.value;
-    if (ten < 2) {
-        alert("Bạn chưa nhập tên");
-        return false;
-    }
-    if (user < 6) {
-        alert("Bạn nhập tên tài khoản quá ngắn");
-        return false;
-    }
-    if ( thienthi < 1) {
-        alert("Tên để hiển thị không có");
-        return false;
-    }
-    if (pass.length < 1) {
-        alert("Bạn chưa nhập mật khẩu");
-        return false;
-    }
-    if (pass != xpass) {
-        alert("Mật khẩu không giống !");
-        return false;
-    }
-    var aCong = email.indexOf("@");
-    var dauCham = email.lastIndexOf(".");
-    if (email == "") {
-        alert("Email không được để trống");
-        return false;
-    }
-    else if ((aCong < 1) || (dauCham < aCong + 2) || (dauCham + 2 > email.length)) {
-        alert("Ops. Email bạn nhập không hợp lệ");
-        return false;
-    }
-}
 function ajax( method , action){
 
     var xhr = new XMLHttpRequest();
@@ -92,16 +54,14 @@ function hieuUngXoa(){
             }
         });
 };
-function hienThi(idHien,idAn){
-    $('#'+idHien).each(function () {
-        var hsClass = $(this).hasClass('an-tuong-tac');
+function hiden(id){
+    $('#'+id).each(function () {
+        var hsClass = $(this).hasClass('hidden');
         if(hsClass){
-            $(this).removeClass("an-tuong-tac");
-            $('#'+idAn).addClass("an-tuong-tac");
+            $(this).removeClass("hidden");
         }
         else {
-            $(this).addClass("an-tuong-tac");
-            $('#'+idAn).removeClass("an-tuong-tac");
+            $(this).addClass("hidden");
         }
     });
 }

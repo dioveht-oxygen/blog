@@ -53,7 +53,7 @@ $stt = 1;
                     <td><?php echo $val['username']; ?></td>
                     <td><?php $date = date_create($val['DoB']);
                         echo date_format($date, 'd-m-y'); ?></td>
-                    <td><?php echo $val['sex'] = 1 ? 'Nam' : 'Nữ';  ?></td>
+                    <td><?php echo $val['sex'] == 0 ? 'Nữ' : 'Nam';  ?></td>
                     <td><?php echo $val['mail'];  ?></td>
                     <td>
                         <span>

@@ -10,7 +10,9 @@ main {
     width: 100vw;
     margin: 0 auto;
 }
-
+.hidden{
+    display: none;
+}
 .l {
     background-color: rgba(0,0,0,0.7);
     border-radius: 0.75em;

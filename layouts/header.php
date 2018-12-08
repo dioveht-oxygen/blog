@@ -14,6 +14,7 @@
     <script src="<?php echo get_base(); ?>js/poper.js"></script>
     <script src="<?php echo get_base(); ?>bootstrap-4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="<?php echo get_base(); ?>bootstrap-4.1.3/dist/js/bootstrap.bundle.js"></script>
+    <script src="<?php echo get_base() ?>/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="menu">
@@ -26,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo get_base() ?>/controller/user_controller.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo get_base() ?>controller/user_controller.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.facebook.com/nhamnhi.kuso">Contact</a>
