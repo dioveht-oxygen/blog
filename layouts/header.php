@@ -9,12 +9,16 @@
     <link type="text/css" rel="stylesheet" href="<?php echo get_base(); ?>css/style.css">
     <link type="text/css" rel="stylesheet" href="<?php echo get_base(); ?>bootstrap-4.1.3/dist/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="<?php echo get_base(); ?>bootstrap-4.1.3/dist/css/bootstrap-grid.min.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo get_base() ?>swiper-4.4.1\dist\css\swiper.min.css">
     <script src="<?php echo get_base(); ?>js/jquery-1.11.0.min.js"></script>
     <script src="<?php echo get_base(); ?>js/jquery-migrate-1.2.1.min.js"></script>
     <script src="<?php echo get_base(); ?>js/poper.js"></script>
     <script src="<?php echo get_base(); ?>bootstrap-4.1.3/dist/js/bootstrap.min.js"></script>
     <script src="<?php echo get_base(); ?>bootstrap-4.1.3/dist/js/bootstrap.bundle.js"></script>
-    <script src="<?php echo get_base() ?>/ckeditor/ckeditor.js"></script>
+    <script src="<?php echo get_base() ?>ckeditor/ckeditor.js"></script>
+    <script src="<?php echo get_base() ?>swiper-4.4.1\dist\js\swiper.min.js"></script>
+    <script src="<?php echo get_base() ?>swiper-4.4.1\dist\js\swiper.esm.js"></script>
+    <script src="<?php echo get_base() ?>swiper-4.4.1\dist\js\swiper.esm.bundle.js"></script>
 </head>
 <body>
 <div class="menu">
