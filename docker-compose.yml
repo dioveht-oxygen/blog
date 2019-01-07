@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "8888:80"
     volumes:
       - ./:/app
     working_dir: /app
-    command: php artisan serv
+    command: ./run.sh
