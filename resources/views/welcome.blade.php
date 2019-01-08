@@ -63,33 +63,93 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <!-- react -->
+        <script src="/react/react.development.js" crossorigin></script>
+        <script src="/react/react-dom.development.js" crossorigin></script>
+
+        <!-- babel -->
+        <script src="/react/babel.min.js"></script>
+
+        <!-- bootstrap -->
+        <script src="/react/jquery-3.3.1.slim.min.js"></script>
+        <script src="/react/popper.min.js"></script>
+        <script src="/react/bootstrap.min.js"></script>
+
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!--<script src="prop-types.js"></script>-->
+        <!--<script src="react-tabs.development.js"></script>-->
+
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+        <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+        <div id="main"></div>
     </body>
+
+    <script type="text/babel">
+
+        class Title extends React.Component {
+
+            constructor(props) {
+                super(props);
+            }
+
+            render() {
+                return (
+                    <div class="title m-b-md">
+                        Laravel
+                    </div>
+                )
+            }
+        }
+
+        class Links extends React.Component {
+
+            constructor(props) {
+                super(props);
+            }
+
+            render() {
+                return (
+                    <div class="links">
+                        <a href="https://laravel.com/docs">Documentation</a>
+                        <a href="https://laracasts.com">Laracasts</a>
+                        <a href="https://laravel-news.com">News</a>
+                        <a href="https://forge.laravel.com">Forge</a>
+                        <a href="https://github.com/laravel/laravel">GitHub</a>
+                    </div>
+                )
+            }
+        }
+
+        class Main extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {context: '', namespace: ''};
+            }
+
+            render() {
+                return (
+                    <div class="flex-center position-ref full-height">
+                        <div class="content">
+                            <Title />
+                            <Links />
+                        </div>
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<Main/>, document.querySelector('#main'));
+
+    </script>
+
 </html>
