@@ -19,8 +19,8 @@ class MailController extends Controller
         $data = [ 'name' => "Dioveht"];
         Mail::send('mail.mail_template' , $data , function ($msg){
             $msg->from('kiritosao1526@gmail.com' ,'kiri');
-            $msg->to('kiritosao1526@gmail.com' , 'kiri')->subject('test gui mail');
+            $msg->to('phannam1412@yahoo.com' , 'kiri')->subject('test gui mail');
         });
-        return view('mail');
+//        return view('mail');
     }
 }

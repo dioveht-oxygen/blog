@@ -1,4 +1,4 @@
 #!/bin/bash
 
-composer install
+#composer install
 php artisan serv --host=0.0.0.0
